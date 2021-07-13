@@ -1,0 +1,334 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.body{
+    margin: 2% 5%;
+}
+/* header  */
+.header{
+    display: grid;
+    grid-template-columns: 20% 25% 50%;
+    align-items: center;
+    justify-items: right;
+    /* background: teal; */
+    background-image: linear-gradient(coral, goldenrod,salmon);
+}
+.logo img{
+    width: 40%;
+}
+.icons li{
+    margin-right: 5px;
+}
+.icons img{
+    width: 5%;
+}
+li{
+    display: inline;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+.navbar li{
+    margin-right: 30px;
+} 
+.menu-icon{
+    width: 30px;
+    display: none;
+}
+/* header done  */
+/* marquee section  */
+.marq{
+    color: hotpink;
+    margin: 5px 0px;
+}
+/* marquee section done */
+/* banner section  */
+.banner{
+    background-image: url(/images/banner.jpeg);
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    box-shadow: 0 10px 5px coral;
+}
+/* banner section done */
+/* content section  */
+.tobi{
+    display: grid;
+    grid-template-columns: repeat(4, 25%); 
+}
+.mik{
+    /* border: 3px solid salmon; */
+    /* background: salmon; */
+    text-align: center;
+    margin: 50px 10px 50px 20px;
+    width: 250px;
+    height: 80vh;
+    padding: 20px 20px 60px;
+    box-shadow: 0 0 20px 0 black;
+    transition: transform 0.5s;
+}
+/* hover effect on a box  */
+.mik:hover{
+    border: 3px solid goldenrod;
+    box-shadow: 0 20px 10px 5px goldenrod;
+    transform: translateY(-30px);
+}
+/* hover effect on a box  */
+.mik-img{
+    /* background: teal; */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: tomato;
+    font-weight: bolder;
+}
+.mik-img img{
+    width: 100%;
+    height: 100%;
+}
+/* how to display text on image when image is on HTML  */
+.top-left{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+.bot-left{
+    position: absolute;
+    bottom: 1px;
+    left: 20px;
+    color: green;
+    font-size: 20px;
+}
+.top-right{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.bot-right{
+    position: absolute;
+    bottom: 1px;
+    right: 10px;
+    color: red;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: yellow;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+}
+/* how to display text on image when image is on HTML  */
+.title-hover{
+    color: coral;
+    margin-top: 8px;
+}
+.title-display{
+    display: none;
+}
+.title-hover:hover + .title-display{
+    display: block;
+    color: teal;
+    line-height: 2;
+}
+/* content section done */
+/* footer section  */
+.mfooter{
+    background: black;
+    padding-bottom: 10px;
+    box-shadow: 0 20px 10px 5px grey;
+}
+.footer{
+    display: grid;
+    grid-template-columns: 20% 40% 20% 20%;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    /* background: black; */
+    padding: 30px 10px 10px;
+}
+.footer h1{
+    color: #fff;
+    margin-bottom: 20px;
+}
+.footer h3{
+    color: coral;
+    font-size: 15px;
+    font-weight: bold;
+}
+.footer img{
+    width: 50%;
+}
+.footer li{
+    display: block;
+    margin-bottom: 5px;
+}
+.footer a{
+    color: #fff;
+    font-size: 20px;
+}
+.mfooter p{
+    color: #b5b5b5;
+    text-align: center;
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+}
+.mfooter #ptag{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.mfooter hr{
+    border: 0.2px solid #fff;
+    margin: 0 80px;
+}
+/* footer section done */
+
+/* Resposiveness on all form factor, sm device mobile first  */
+@media (max-width: 500px){
+    .body{
+        margin: 0; 
+    } 
+    .navbar ul{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        text-align: right;
+    }
+    .navbar li{
+        display: block;
+        margin: 10px 50px 10px 0;
+    }
+    .navbar a{
+        color: yellowgreen;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+    .tobi{
+        display: grid;
+        grid-template-columns: 100%; 
+    }
+    .mik{
+        border: 3px solid salmon;
+        text-align: center;
+        margin: 50px 10px;
+        padding: 150px 120px;
+    }
+    .footer{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        padding: 30px 10px 10px;
+    }
+}
+@media (min-width: 501px) and (max-width: 1100px){
+    .body{
+        margin: 0; 
+    } 
+    .navbar ul{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        text-align: right;
+    }
+    .navbar li{
+        display: block;
+        margin: 10px 50px 10px 0;
+    }
+    .navbar a{
+        color: crimson;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+    .tobi{
+        display: grid;
+        grid-template-columns: repeat(2, 50%); 
+    }
+    .mik{
+        border: 3px solid salmon;
+        text-align: center;
+        margin: 50px 10px;
+        padding: 150px 120px;
+    }
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(4,25%);
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        padding: 30px 10px 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+    /* .navbar ul{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        text-align: right;
+    } */
+    
+
+
+
+
+
